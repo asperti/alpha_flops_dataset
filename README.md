@@ -21,4 +21,8 @@ Each plot is a python dictionary composed by the following entries:
  - text: a list of textual informations to be added to the drawing. Each textual info is a tuple (x,y,s) where x and y are the coordinate and s is the string
  - lines: this is a list of "lines", with a number equal to no_lines. Each line, is an ordered list of tuples of the kind described in the previous section, typically increasing along the specified 'axis'of the second point 
  - hardware: this field contains informations about the hardware used to acquire data. In particular, we give the GPU type (e.g. 'Quadro T2000'), its computeCapability, the coreClock frequency (in GHz), and the coreCount.
-                    
+
+# Plotting facilities
+In addition to PLOTS we also provide a simple plotting code to draw diagrams starting form the plot infromations desscribed above. The plotting function also accept as
+inut an additional "predict" argument, that can be instantiated with your own prediction, and will be depicted with a black dashed line.
+
