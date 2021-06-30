@@ -14,11 +14,11 @@ The precise structure of each plot is detailed in the following section.
 Each plot is a python dictionary composed by the following entries:
 
 - name: a short descriptive name of the plot
-- no_lines: number of lines compising the plot
+- no_lines: number of lines composing the plot
 - axis: this could either be a number, specifing the growing dimension among [H,W,Cin,Cout,K1,K2] or the special keyword 'progressive'.
  - x_axis_name: the name to associate with the x-axis
  - ylim: the limit fot the y-axis (could be None)
  - text: a list of textual informations to be added to the drawing. Each textual info is a tuple (x,y,s) where x and y are the coordinate and s is the string
- - lines: this is a list of "lines", with a number equal to no_lines. Each line, is a list of tuples of the kind described in the previous section
+ - lines: this is a list of "lines", with a number equal to no_lines. Each line, is an ordered list of tuples of the kind described in the previous section, typically increasing along the specified 'axis'of the second point 
  - hardware: this field contains informations about the hardware used to acquire data. In particular, we give the GPU type (e.g. 'Quadro T2000'), its computeCapability, the coreClock frequency (in GHz), and the coreCount.
                     
