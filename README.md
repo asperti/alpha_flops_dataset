@@ -7,7 +7,7 @@ Raw data are tuples of the form [H,W,Cin,Cout,K1,K2,T] where H is the Height, W 
 
 These data are organized in "PLOTS", in order to allow a simple generation of relevant diagrams. The plots correspond to the figures in the article.
 Typically each plot is a collection of "lines", growing along a specific dimension (or a combination of them). Along the y-axis we always have time.
-The precise structure of each plot is detailed in the following section.
+All plots are contained in data.pickle. The precise structure of each plot is detailed in the following section.
 
 
 # The structure of plots
