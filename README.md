@@ -6,11 +6,19 @@ This repository contains the data used in the article "Dissecting FLOPs along in
 Raw data are tuples of the form [H,W,Cin,Cout,K1,K2,T] where H is the Height, W is the Width, Cin is the number of input channels, Cout is the number of output channels, K1 and K2 are the kernel dimensions, and T is the execution time. The exection time has been measured as an average over 2000 different executions.
 
 These data are organized in "PLOTS", in order to allow a simple generation of relevant diagrams. The plots correspond to the figures in the article.
-Typically each plot is a collection of "lines", growing along a specific dimension (or a combination of them). Along the y-axes we always have time.
+Typically each plot is a collection of "lines", growing along a specific dimension (or a combination of them). Along the y-axis we always have time.
 The precise structure of each plot is detailed in the following section.
 
 
-# the strucure of plots
+# The structure of plots
 Each plot is a python dictionary composed by the following entries:
 
-- 
+- name: a short descriptive name of the plot
+- no_lines: number of lines compising the plot
+- axis: this could either be a number, specifing the growing dimension among [H,W,Cin,Cout,K1,K2] or the special keyword 'progressive'.
+ - x_axis_name: the name to associate with the x-axis
+ - ylim: the limit fot the y-axis (could be None)
+ - text: a list of textual informations to be added to the drawing. Each textual info is a tuple (x,y,s) where x and y are the coordinate and s is the string
+ - lines: this is a list of "lines", with a number equal to no_lines. Each line, is a list of tuples of the kind described in the previous section
+ - hardware: this field contains informations about the hardware used to acquire data. In particular, we give the GPU type (e.g. 'Quadro T2000'), its computeCapability, the coreClock frequency (in GHz), and the coreCount.
+                    
