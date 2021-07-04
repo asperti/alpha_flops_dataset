@@ -26,3 +26,5 @@ Each plot is a python dictionary composed by the following entries:
 In addition to PLOTS we also provide a simple plotting code to draw diagrams starting form the plot infromations desscribed above. The plotting function also accept as
 inut an additional "predict" argument, that can be instantiated with your own prediction, and will be depicted with a black dashed line.
 
+# Just data
+This repository only contains data and plotting facilities. We do not provide the obvious code for timing execution, of for regression over data.
