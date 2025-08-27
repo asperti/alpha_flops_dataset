@@ -1,3 +1,8 @@
+---
+paper: https://arxiv.org/abs/2107.11949
+repository: https://github.com/asperti/alpha_flops_dataset/
+---
+
 # alpha_flops_dataset
 A dataset comparing flops and execution time for different Convolutional layers
 
